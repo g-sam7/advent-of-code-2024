@@ -7,7 +7,7 @@ export const calculateTotalDistance = (parsedPairs) => {
   }, 0);
 };
 
-export const calculateSimularityScore = (parsedPairs) => {
+export const calculateSimilarityScore = (parsedPairs) => {
   const left = parsedPairs.map(([a]) => a);
   const right = parsedPairs.map(([, b]) => b);
 
