@@ -1,4 +1,4 @@
-import { calculateTotalDistance } from './functions.js';
+import { calculateTotalDistance, calculateSimularityScore } from './functions.js';
 
 describe('calculateTotalDistance', () => {
   it('should calculate the total distance correctly for a given set of pairs', () => {
@@ -39,6 +39,29 @@ describe('calculateTotalDistance', () => {
     const parsedPairs = [];
     
     const result = calculateTotalDistance(parsedPairs);
+    expect(result).toBe(0);
+  });
+});
+
+describe('calculateSimularityScore', () => {
+  it('should calculate the simularity score correctly for a given set of pairs', () => {
+    const parsedPairs = [
+      [3, 4],
+      [4, 3],
+      [2, 5],
+      [1, 3],
+      [3, 9],
+      [3, 3],
+    ];
+    
+    const result = calculateSimularityScore(parsedPairs);
+    expect(result).toBe(31);
+  });
+
+  it('should handle empty input', () => {
+    const parsedPairs = [];
+    
+    const result = calculateSimularityScore(parsedPairs);
     expect(result).toBe(0);
   });
 });
