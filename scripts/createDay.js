@@ -19,6 +19,7 @@ if (!fs.existsSync(dir)) {
   fs.writeFileSync(path.join(dir, 'solution.js'), '// Solution goes here\n');
   fs.writeFileSync(path.join(dir, 'solution.test.js'), '// Test cases go here\n');
   fs.writeFileSync(path.join(dir, 'input.txt'), '// Input goes here\n');
+  fs.writeFileSync(path.join(dir, 'prompt.md'), '// Prompt goes here\n');
   console.log(`Day ${day} created in solutions/`);
 } else {
   console.error(`Day ${day} already exists in solutions/`);
